@@ -1,0 +1,93 @@
+.header {
+  background-color: #eee;
+  border-bottom: 1px solid green;
+
+  &__main {
+    width: 1020px;
+    margin: 0px auto;
+    padding-top: 10px;
+
+    &__top {
+      display: flex;
+      justify-content: center;
+      margin: 0px auto;
+
+      &__logo {
+        align-items: center;
+        margin-right: 45px;
+        color: green;
+        font-size: 50px;
+      }
+      &__text {
+        font-size: 50px;
+        font-weight: bolder;
+      }
+    }
+    &__bottom {
+      display: flex;
+      margin-top: 8px;
+      justify-content: space-between;
+      margin-bottom: 5px;
+
+      &__left {
+        display: flex;
+
+        &__logo {
+          padding: 10px;
+          font-weight: bold;
+          color: #6091d3;/*文字色*/
+          background: #FFF;
+          border: solid 3px #6091d3;/*線*/
+          border-radius: 10px;/*角の丸み*/
+          margin-right: 15px;
+          line-height: 25px;
+
+          p {
+            font-size: 20px;
+            color: red;
+            text-align: center;
+          }
+        }
+        &__text {
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          padding: 3px;
+          p {
+            font-size: 30px;
+          }
+          
+        }
+      }
+      &__right {
+        display: flex;
+        font-size: 20px;
+
+        
+        &__chat {
+          margin-left: 15px;
+        }
+        &__logout {
+          margin-left: 15px;
+        }
+        &__mypage {
+          margin-left: 15px;
+        }
+        &__login {
+          margin-left: 15px;
+        }
+        &__signup {
+          margin-left: 15px;
+        }
+        .header__main__bottom__right__btn {
+          color: red;
+          text-decoration: none;
+          text-align: center;
+          line-height: 50px;
+          border-radius: 10px;
+          border: solid 2px red;
+          padding: 10px;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+}

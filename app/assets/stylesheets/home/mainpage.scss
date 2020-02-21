@@ -1,0 +1,86 @@
+.top-page {
+
+  &__main {
+    width: 1020px;
+    margin: 0px auto;
+    padding-top: 10px;
+
+    &__info {
+      margin: 15px 0;
+      &__titel {
+        p {
+          font-size: 20px;
+        }
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0;
+        li {
+          table {
+            border-collapse: collapse;
+
+            tr {
+              th {
+                padding-left: 10px;
+                text-align: center;
+                background-color: lightgreen;
+              }
+            }
+            tr {
+              td {
+                margin: 0;
+                padding: 0 10px;
+                line-height: 30px;
+              }
+            }
+            a {
+              text-decoration: none;
+              color: rgb(0, 149, 238);
+            }
+          }
+        }
+      }
+    }
+    &__form {
+      margin: 15px 0;
+
+      &__slogan {
+        padding: 15px 0;
+      }
+      &__title {
+        margin: 15px 0;
+        
+        p {
+          font-size: 20px;
+        }
+        input {
+          border-radius: 5px;
+          height: 70px;
+          width: 100%;
+          padding: 10px 16px 8px;
+          border: 1px solid #ccc;
+          font-size: 50px;
+          margin: 15px 0;
+          text-align: center;
+        }
+      }
+    }
+    &__ky {
+      margin: 15px 0;
+
+      &__title {
+        font-size: 20px;
+        margin: 15px 0;
+      }
+      &__text {
+        color: grey;
+      }
+    }
+    &__etc {
+      &__emergency-contact {
+        color: grey;
+      }
+    }
+  }
+}

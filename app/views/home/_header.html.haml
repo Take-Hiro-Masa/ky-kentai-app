@@ -3,7 +3,8 @@
     .header__main__top
       .header__main__top__logo
         %i.fas.fa-plus-square
-      .header__main__top__text  安全掲示板
+      =link_to root_path, class: "header__main__top__text" do
+        安全掲示板
 
     .header__main__bottom
       .header__main__bottom__left
@@ -18,10 +19,10 @@
             = link_to '#', class:"header__main__bottom__right__btn" do
               チャット
           %li.header__main__bottom__right__logout
-            = link_to '#', class:"header__main__bottom__right__btn" do
+            = link_to destroy_user_session_path, method: 'delete', class:"header__main__bottom__right__btn" do
               ログアウト
           %li.header__main__bottom__right__mypage
-            = link_to '#', class:"header__main__bottom__right__btn" do
+            = link_to mypage_index_path, class:"header__main__bottom__right__btn" do
               マイページ
 
       - else 
@@ -30,8 +31,8 @@
             = link_to '#', class:"header__main__bottom__right__btn" do
               チャット
           %li.header__main__bottom__right__login
-            = link_to '#', class:"header__main__bottom__right__btn" do
+            = link_to new_user_session_path, class:"header__main__bottom__right__btn" do
               ログイン
           %li.header__main__bottom__right__signup
-            = link_to '#', class:"header__main__bottom__right__btn" do
+            = link_to step1_companies_path, class:"header__main__bottom__right__btn" do
               新規登録

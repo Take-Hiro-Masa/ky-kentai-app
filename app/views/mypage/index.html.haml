@@ -1,0 +1,58 @@
+.mypage
+  =render 'signup/header'
+
+  .mypage__main
+    %h1.mypage__main__title
+      個人ページ
+    .mypage__main__top
+      %table
+        %tr
+          %th 氏名
+          %td 
+            = current_user.f_name
+            = current_user.l_name
+        %tr
+          %th 性別
+          %td 
+            = current_user.gender
+        %tr
+          %th 血液型
+          %td 
+            = current_user.blood_type
+            型
+        %tr
+          %th 生年月日
+          %td 
+            = current_user.birth_yyyy 
+            年
+            = current_user.birth_mm 
+            月
+            = current_user.birth_dd 
+            日
+        %tr
+          %th 職種
+          %td 
+            = current_user.job_type
+
+    .mypage__main__bottom
+      %ul.mypage__main__bottom__nav
+        %li.mypage__main__bottom__nav__list
+          =link_to new_report_path, class: 'btn-border-bottom' do
+            KY作成へ
+        %li.mypage__main__bottom__nav__list
+          =link_to '#', class: 'btn-border-bottom' do
+            新規入場へ
+        %li.mypage__main__bottom__nav__list
+          =link_to '#', class: 'btn-border-bottom' do
+            タイムカードへ
+        %li.mypage__main__bottom__nav__list
+          =link_to '#', class: 'btn-border-bottom' do
+            日報へ
+        %li.mypage__main__bottom__nav__list
+          =link_to '#', class: 'btn-border-bottom' do
+            所属会社へ
+        %li.mypage__main__bottom__nav__list
+          =link_to destroy_user_session_path, method: 'delete', class: 'btn-border-bottom' do
+            ログアウト
+          
+  =render 'home/footer'

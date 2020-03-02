@@ -1,4 +1,4 @@
 class Notification < ApplicationRecord
-  has_many :company
-  has_many :report
+  has_many :companies
+  has_many :reports
 end

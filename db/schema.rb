@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_18_042128) do
+ActiveRecord::Schema.define(version: 2020_02_28_092327) do
 
   create_table "companies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "company_name", null: false
@@ -23,11 +23,12 @@ ActiveRecord::Schema.define(version: 2020_02_18_042128) do
     t.string "Representative", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "notification_id"
   end
 
   create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "report_id", null: false
-    t.bigint "company_id", null: false
+    t.bigint "report_id"
+    t.bigint "company_id"
     t.string "construction_name", null: false
     t.string "contractor", null: false
     t.string "industrial_accident", null: false
@@ -49,11 +50,11 @@ ActiveRecord::Schema.define(version: 2020_02_18_042128) do
     t.string "workers", null: false
     t.text "ky", null: false
     t.text "measures", null: false
-    t.text "sign", null: false
-    t.bigint "company_id", null: false
+    t.text "sign"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["company_id"], name: "index_reports_on_company_id"
+    t.integer "notification_id"
+    t.integer "company_id"
     t.index ["user_id"], name: "index_reports_on_user_id"
   end
 
@@ -65,18 +66,17 @@ ActiveRecord::Schema.define(version: 2020_02_18_042128) do
     t.string "f_name_kana", null: false
     t.string "l_name_kana", null: false
     t.string "gender", null: false
-    t.integer "birth_yyyy_id", null: false
-    t.integer "birth_mm_id", null: false
-    t.integer "birth_dd_id", null: false
+    t.integer "birth_yyyy", null: false
+    t.integer "birth_mm", null: false
+    t.integer "birth_dd", null: false
     t.string "job_type", null: false
     t.string "blood_type", null: false
-    t.bigint "company_id", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["company_id"], name: "index_users_on_company_id"
+    t.integer "company_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

@@ -1,0 +1,45 @@
+.signup__complete {
+  // height: 330px;
+  width: 700px;
+  background-color: #fff;
+  margin: 0 auto;
+  &__title {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(245, 245, 245);
+    text-align: center;
+  }
+  &__box {
+    height: 100%;
+    text-align: center;
+    .form__info {
+      font-size: 18px;
+      margin-top: 36px;
+      padding-bottom: 50px;
+    }
+    .next__btn {
+      margin-bottom: 20px;
+    }
+    .next__to__btn {
+      display: block;
+      text-decoration: none;
+      color: #668ad8;
+      width: 120px;
+      height: 120px;
+      line-height: 120px;
+      border-radius: 50%;
+      border: solid 2px #668ad8;
+      text-align: center;
+      overflow: hidden;
+      font-weight: bold;
+      transition: .4s;
+      margin: 24px auto 0;
+    }
+    .next-btn:hover {
+      background: #b3e1ff;
+    }
+  }
+}

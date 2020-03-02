@@ -1,0 +1,95 @@
+.wrapper
+  = render "home/header" 
+  .top-page
+    .top-page__main
+      .top-page__main__info
+        .top-page__main__info__titel
+          .top-page__main__info__titel__info
+            %P -INFORMATION-
+          .top-page__main__info__titel__date
+            %p= l(Date.today, format: :default)
+
+        %ul
+          %li
+            %table
+              %tr
+                %th 工事内容
+              %tr{:align => "center"}
+                %td 
+                  = @notifications[0]['construction_name']
+              %tr{:align => "right"}
+                %td 
+                  = link_to '詳細へ >','#'
+          %li
+            %table
+              %tr
+                %th 受注会社
+              %tr{:align => "center"}
+                %td 
+                  = @notifications[0]['contractor']
+              %tr{:align => "right"}
+                %td 
+                  = link_to '詳細へ >','#'
+          %li
+            %table
+              %tr
+                %th 労災保険関係成立票
+              %tr{:align => "center"}
+                %td 12-3-45-678912-345
+              %tr{:align => "right"}
+                %td 
+                  = link_to '詳細へ >','#'
+          %li
+            %table
+              %tr
+                %th 発注者
+              %tr{:align => "center"}
+                %td 
+                  = @notifications[0]['order_source']
+              %tr{:align => "right"}
+                %td 
+                  = link_to '詳細へ >','#'
+          %li
+            %table
+              %tr
+                %th 工程
+              %tr{:align => "center"}
+                %td 
+                  = @notifications[0]['process']
+              %tr{:align => "right"}
+                %td 
+                  = link_to '詳細へ >','#'
+
+      .top-page__main__topic
+        .top-page__main__topic__slogan
+          .top-page__main__topic__slogan__title
+            %p -今月の安全スローガン-
+          .top-page__main__topic__slogan__text
+            = @notifications[0]['slogan']
+            指差しヨシ！！！
+
+      .top-page__main__ky
+        .top-page__main__ky__title
+          %p -危険予知-
+        .top-page__main__ky__contents
+          - @reports.each do |report|
+            .top-page__main__ky__content
+              = link_to report_path(report.id) do
+                .top-page__main__ky__content__top
+                  KY
+                .top-page__main__ky__content__company
+                  会社名 : 
+                  = @companies[0]['company_name']
+                .top-page__main__ky__content__middle
+                  職長 : 
+                  = report.leader
+                .top-page__main__ky__content__bottom
+                  = report.safety_goals
+                  ヨシ！！
+                .top-page__main__ky__content__date
+                  = report.created_at.strftime('%Y年%m月%d日')
+
+      .top-page__main__etc
+        %p -その他-
+        .top-page__main__etc__emergency-contact
+  = render "home/footer"

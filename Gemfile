@@ -72,3 +72,9 @@ gem 'font-awesome-sass'
 
 #binding.pryのため
 gem 'pry-rails'
+
+#パンくず
+gem "gretel"
+
+#日本語化
+gem 'rails-i18n', '~> 5.1' 

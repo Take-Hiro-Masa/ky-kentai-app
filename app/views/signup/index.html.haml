@@ -1,0 +1,22 @@
+.signup
+  = render "signup/header"
+
+  .signup__main
+    .signup__main__header
+      %p 新規登録
+    .signup__main__form
+      = form_with model: @user, local: true, url: step2_signup_index_path, class: "signup__main__form__content", method: 'GET' do |f|
+
+        .signup__main__form__title
+          %label メールアドレス
+          %span.signup__main__form__require 必須 
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder:'PC・携帯どちらでも可', class: "signup__main__form__input"
+        
+        .signup__main__form__title
+          %label パスワード
+          %span.signup__main__form__require 必須
+          = f.password_field :password, autocomplete: "off", placeholder:'7文字以上', class: "signup__main__form__input"
+          
+        = f.submit "次へ進む", class: "signup__main__form__btn"
+
+  = render "home/footer"

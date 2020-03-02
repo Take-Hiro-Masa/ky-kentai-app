@@ -10,8 +10,7 @@ class CreateReports < ActiveRecord::Migration[5.2]
       t.string :workers,      null: false
       t.text   :ky,           null: false
       t.text   :measures,     null: false
-      t.text   :sign,         null: false
-      t.bigint :company_id,   null: false, foreign_key: true, index: true
+      t.text   :sign
 
 
       t.timestamps null: false

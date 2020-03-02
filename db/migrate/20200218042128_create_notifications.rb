@@ -1,8 +1,8 @@
 class CreateNotifications < ActiveRecord::Migration[5.2]
   def change
     create_table :notifications do |t|
-      t.references :report,        null: false, foreign_key: true, index: true
-      t.references :company,       null: false, foreign_key: true, index: true
+      t.references :report,          foreign_key: true, index: true
+      t.references :company,         foreign_key: true, index: true
 
       t.string :construction_name,   null: false
       t.string :contractor,          null: false
@@ -11,7 +11,7 @@ class CreateNotifications < ActiveRecord::Migration[5.2]
       t.string :process,             null: false
       t.string :slogan,              null: false
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

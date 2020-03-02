@@ -1,0 +1,80 @@
+.report__main {
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  height: 100%;
+  width: 700px;
+  margin: 0 auto;
+
+  &__top {
+    display: flex;
+    margin-top: 30px;
+    border-bottom: solid 3px black;
+    justify-content: space-between;
+
+    &__title {
+      font-weight: bolder;
+      font-size: 25px;
+    }
+    &__date {
+      padding-bottom: 0;
+      p {
+        margin: 8px 0 0 0;
+        font-size: 20px;
+      }
+    }
+  }    
+  &__info {
+    margin: 30px auto;
+    font-size: 20px;
+    width: 500px;
+    &__company {
+      border-bottom: solid 1px lightgray;
+      margin-bottom: 10px;
+    }
+    &__notification {
+      border-bottom: solid 1px lightgray;
+    }
+  }
+  &__form {
+    font-size: 20px;
+    &__contents {
+      width: 600px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+    &__work-site {
+      margin-bottom: 10px;
+    }
+    &__work-content {
+      margin-bottom: 10px;
+    }
+    &__ky {
+      margin-bottom: 10px;
+    }
+    &__measures {
+      margin-bottom: 10px;
+    }         
+    &__safety-goals {
+      margin-bottom: 10px;
+    }         
+    &__leader {
+      margin-bottom: 10px;
+    }         
+    &__worker {
+      margin-bottom: 10px;
+    }
+    &__input {
+      width: 100%;
+      font-size: 20px;
+      padding: 5px 10px;
+      margin-right: 10px;
+      border-radius: 5px;
+      border:solid 1px #ccc;
+    }
+    #workers {
+      width: 80%;
+    }
+    #safety_goals {
+      width: 80%;
+    }
+  }
+}

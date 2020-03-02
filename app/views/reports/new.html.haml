@@ -1,0 +1,64 @@
+.report
+  = render 'signup/header'
+
+  .report__main
+    .report__main__top
+      .report__main__top__title
+        危険予知活動表
+      .report__main__top__date
+        %p= l(current_user.created_at, format: :default)
+
+    .report__main__info
+      .report__main__info__company
+        会社名 :
+        = @companies[0]['company_name']
+
+      .report__main__info__notification
+        工事名 :
+        = @notifications[0]['construction_name']
+
+    .report__main__form
+      = form_with model: @report, url: reports_path, method: 'post', local: true, class: "report__main__form__contents" do |f|
+        
+        .report__main__form__work-site
+          現場名
+          %br
+          = f.text_field :work_site, class:'report__main__form__input', placeholder: '例）中津川大橋'
+  
+        .report__main__form__work-content
+          作業内容
+          %br
+          = f.text_field :work_content, class:'report__main__form__input', placeholder: '例）コンクリート打設・養生'
+  
+        .report__main__form__ky
+          起こりうる危険
+          %br
+          = f.text_field :ky, class:'report__main__form__input', placeholder: '例）養生足場から転落する'
+  
+        .report__main__form__measures
+          私たちはこうする
+          %br
+          = f.text_field :measures, class:'report__main__form__input', placeholder: '例）安全帯をつける'
+
+        .report__main__form__safety-goals
+          今日の安全確認
+          %br
+          = f.text_field :safety_goals, class:'report__main__form__input', placeholder: '例）安全帯', id: 'safety_goals'
+          ヨシ！！
+
+        .report__main__form__leader
+          職長
+          %br
+          = f.text_field :leader, class:'report__main__form__input'
+
+        .report__main__form__workers
+          作業員
+          %br
+          = f.text_field :workers, class:'report__main__form__input', id: 'workers'
+          名
+
+        .report__main__form__sign
+
+        = f.submit "提出", class: "signup__main__form__btn"
+
+  = render 'home/footer'

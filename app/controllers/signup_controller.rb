@@ -1,7 +1,7 @@
 class SignupController < ApplicationController
   def index
     @user = User.new
-    @companies = company.all
+    @company = company.all
   end
 
   def step2

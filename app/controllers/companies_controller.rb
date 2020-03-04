@@ -43,6 +43,6 @@ private
       :building,
       :phone_num,
       :Representative
-    ).merge(user_id: current_user.id)
+    )
   end
 end

@@ -1,0 +1,15 @@
+.signup
+  = render "signup/header"
+
+  .signup__complete
+    .signup__complete__title
+      人員情報入力
+    .signup__complete__box
+      .form__info
+        お疲れ様でした。
+        %br
+        登録完了しました。
+      .next__btn
+        = link_to 'トップページへ', '/reports', class:"next__to__btn"
+  
+  = render "home/footer"

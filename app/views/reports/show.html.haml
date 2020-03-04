@@ -1,0 +1,59 @@
+.display
+  = render 'signup/header'
+  .display__main
+
+    .display__main__top
+      .display__main__top__title
+        .display__main__top__title__logo
+          KY
+        .display__main__top__title__text
+          ー危険予知活動表ー
+      .display__main__top__date
+        = @report.created_at.strftime('%Y年%m月%d日')
+
+    .display__main__info
+      .display__main__info__company
+        会社名 :
+        = @companies[0]['company_name']
+
+      .display__main__info__construction
+        工事名 :
+        = @notifications[0]['construction_name']
+
+    .display__main__work-content
+      本日の作業内容 :
+      = @report.work_content
+
+    .display__main__table
+      %table
+        %tr
+          %th 起こりうる危険
+          %th 私たちはこうする
+        %tr
+          %td 
+            ・
+            = @report.ky
+          %td 
+            ・
+            = @report.measures
+
+    .display__main__safety-goals
+      今日の安全確認 :
+      = @report.safety_goals
+      ヨシ！！
+
+    .display__main__under
+      .display__main__under__leader
+        職長 :
+        = @report.leader
+
+      .display__main__under__workers
+        作業員
+        = @report.workers
+        名
+
+      = link_to root_path do
+        .display__main__under__return
+          トップページへ
+        
+  = render 'home/footer'

@@ -1,0 +1,135 @@
+.top-page {
+
+  &__main {
+    width: 1020px;
+    margin: 0px auto;
+    padding-top: 10px;
+
+    &__info {
+      margin-top: 25px;
+      &__titel {
+        justify-content: space-between;
+        display: flex;
+
+        &__info {
+          font-size: 20px;
+        }
+        &__date {
+          font-size: 30px;
+
+        }
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0;
+        li {
+          padding: 0 15;
+          table {
+            border-collapse: collapse;
+
+            tr {
+              th {
+                padding: 0 30px;
+                text-align: center;
+                background-color: lightgreen;
+              }
+              td {
+                padding: 0 10px;
+                line-height: 30px;
+              }
+              a {
+                text-align: right;
+                text-decoration: none;
+                color: rgb(0, 149, 238);
+              }
+            }
+          }
+        }
+      }
+    }
+    &__topic {
+      margin: 15px 0;
+
+      &__slogan {
+        padding: 15px 0;
+      
+        &__title {
+          margin: 15px 0;
+          font-size: 20px;
+
+        }
+        &__text {
+          font-size: 20px;
+          border-radius: 5px;
+          height: 70px;
+          width: 100%;
+          padding: 10px 16px 8px;
+          // border: 1px solid #ccc;
+          font-size: 50px;
+          margin: 15px 0;
+          text-align: center;
+        }
+      }
+    }
+    &__ky {
+      margin: 15px 0;
+      background-color: #f4f4f4;
+
+      &__title {
+        margin: 15px 0;
+        position: relative;
+        height: 32px;
+        p {
+          position: absolute;
+          top: 8px;
+          left: 15px;
+        }
+      }
+      &__contents {
+        display: flex;
+        padding-bottom: 30px;
+      }
+      &__content {
+        background-color: white;
+        margin: 0 10px;
+        &__top {
+          text-align: center;
+          border-bottom: 1px solid green;
+          font-size: 20px;
+          padding: 10px;
+        } 
+        &__company {
+          border-bottom: 1px solid rgb(245, 245, 245);
+          padding: 10px;
+
+        }
+        &__middle {
+          border-bottom: 1px solid rgb(245, 245, 245);
+          padding: 10px;
+
+        }
+        &__bottom {
+          border-bottom: 1px solid rgb(245, 245, 245);
+          padding: 10px;
+
+        }
+        &__date {
+          border-bottom: 1px solid rgb(245, 245, 245);
+          padding: 10px;
+          font-size: 13px;
+        }
+        a {
+          text-decoration: none;
+          color: #666;
+        }
+      }
+    }
+    &__etc {
+      &__emergency-contact {
+        color: grey;
+        height: 300px;
+      }
+    }
+  }
+}

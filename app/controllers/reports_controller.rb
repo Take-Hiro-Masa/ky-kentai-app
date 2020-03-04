@@ -22,8 +22,8 @@ class ReportsController < ApplicationController
 
   def show
     @report = Report.find(params[:id])
-    @notification = Notification.all
-    @company = Company.all
+    @notifications = Notification.all
+    @companies = Company.all
   end
 
   def edit

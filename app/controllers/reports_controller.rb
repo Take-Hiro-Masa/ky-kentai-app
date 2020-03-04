@@ -1,14 +1,14 @@
 class ReportsController < ApplicationController
   def index
     @reports = Report.limit(10).order('created_at DESC')
-    @notification = Notification.all
-    @company = Company.all
+    @notifications = Notification.all
+    @companies = Company.all
   end
 
   def new
     @report = Report.new
-    @company = Company.all
-    @notification = Notification.all
+    @companies = Company.all
+    @notifications = Notification.all
   end
 
   def create

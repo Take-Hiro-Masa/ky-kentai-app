@@ -19,19 +19,13 @@ Notification.create!(
   updated_at: '2020-02-29 19:25:53'
 )
 
-User.create(
-  email: 'asd@asdasd',
-  encrypted_password: 'asdasdasd',
-  f_name: '廣瀬',
-  l_name: '賢聡',
-  f_name_kana: 'ヒロセ',
-  l_name_kana: 'マサトシ',
-  gender: '男性',
-  birth_yyyy: '2002',
-  birth_mm: '2',
-  birth_dd: '2',
-  job_type: '土工',
-  blood_type: 'A',
-  created_at: '2020-02-29 19:30:20',
-  updated_at: '2020-02-29 19:30:20'
+Company.create(
+  company_name: '広瀬建設',
+  postal_code: '509-7201',
+  prefecture: '岐阜県',
+  city: '恵那市大井町',
+  block: '青山1−1−1',
+  building: '柳',
+  phone_num: '052−111−1111',
+  Representative: '尾崎'
 )
